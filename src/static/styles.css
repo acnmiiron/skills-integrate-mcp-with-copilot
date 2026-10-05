@@ -50,6 +50,19 @@ section {
   max-width: 500px;
 }
 
+@media (min-width: 768px) {
+  #activities-container {
+    flex: 2;
+    max-width: 720px;
+  }
+
+  #signup-container,
+  #staff-container {
+    flex: 1;
+    min-width: 280px;
+  }
+}
+
 section h3 {
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -130,6 +143,32 @@ section h3 {
   font-style: italic;
 }
 
+.staff-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.organizer-card {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.organizer-card h5 {
+  margin-bottom: 8px;
+}
+
+.organizer-card select {
+  width: 100%;
+  min-height: 90px;
+}
+
+.organizer-card button + button {
+  margin-left: 8px;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -147,6 +186,10 @@ section h3 {
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 16px;
+}
+
+select[multiple] {
+  min-height: 100px;
 }
 
 button {

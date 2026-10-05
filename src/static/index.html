@@ -39,6 +39,47 @@
         </form>
         <div id="message" class="hidden"></div>
       </section>
+
+      <section id="staff-container">
+        <h3>Staff sign in</h3>
+        <form id="staff-login-form">
+          <div class="form-group">
+            <label for="staff-username">Username:</label>
+            <input id="staff-username" name="username" autocomplete="username" required />
+          </div>
+          <div class="form-group">
+            <label for="staff-password">Password:</label>
+            <input id="staff-password" name="password" type="password"
+              autocomplete="current-password" required />
+          </div>
+          <button type="submit">Sign in</button>
+        </form>
+        <div id="staff-message" class="hidden" role="status"></div>
+        <div id="staff-session" class="hidden">
+          <p>Signed in as <strong id="staff-identity"></strong></p>
+          <button id="staff-logout" type="button">Sign out</button>
+        </div>
+        <div id="organizer-admin" class="hidden">
+          <h4>Organizer accounts</h4>
+          <form id="organizer-create-form">
+            <div class="form-group">
+              <label for="organizer-username">Username:</label>
+              <input id="organizer-username" minlength="3" maxlength="64" required />
+            </div>
+            <div class="form-group">
+              <label for="organizer-password">Temporary password (at least 12 characters):</label>
+              <input id="organizer-password" type="password" minlength="12"
+                autocomplete="new-password" required />
+            </div>
+            <div class="form-group">
+              <label for="organizer-assignments">Assigned activities:</label>
+              <select id="organizer-assignments" multiple size="5"></select>
+            </div>
+            <button type="submit">Create organizer</button>
+          </form>
+          <div id="organizers-list" aria-live="polite"></div>
+        </div>
+      </section>
     </main>
 
     <footer>

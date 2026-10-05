@@ -1,2 +1,3 @@
 fastapi
 uvicorn
+PyJWT>=2.8,<3
